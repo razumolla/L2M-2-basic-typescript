@@ -18,9 +18,9 @@ const numbers: number[] = [10, 2, 1, 25, 16];
  * const variable_name: [type,type]= [value, value]
  */
 
-let user: [number, string] = [10, 'Razu']
-// user[0] = "abc"; // error
-user[0] = 12;
+// let user: [number, string] = [10, 'Razu']
+// // user[0] = "abc"; // error
+// user[0] = 12;
 
 
 const isMarid: [string, boolean] = ["Razu", false];
