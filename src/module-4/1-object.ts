@@ -1,5 +1,6 @@
 /**
  * For Run this file: npx ts-node-dev --respawn src/module-4/1-object.ts
+ * -----------------------------------------------------------------
  * class e jokhn ekta function declear kora hoi setake bole method
  * class,method,dog instance
  * ---
