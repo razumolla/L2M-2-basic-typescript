@@ -1,74 +1,82 @@
 "use strict";
-/**
- * Async typescript
- * Promise<string> / Promise<boolen> / Promise<object> /
- */
-var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-// Mocking
-const makePromise = () => {
-    return new Promise((resolve, reject) => {
-        const data = 'Data is fetched';
-        if (data) {
-            resolve(data);
-        }
-        else {
-            reject('failed to fetch data');
-        }
-    });
-};
-// const result1 = makePromise()
-const getPromiseData = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield makePromise();
-    return data;
-});
-/**
- * Promise for boolean type
- */
-const makePromiseBoolean = () => {
-    return new Promise((resolve, reject) => {
-        const data = true;
-        if (data) {
-            resolve(data);
-        }
-        else {
-            reject('failed to fetch data');
-        }
-    });
-};
-const getPromiseDataBoolean = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield makePromiseBoolean();
-    return data;
-});
-;
-const makePromiseObject = () => {
-    return new Promise((resolve, reject) => {
-        const data = { data: 'Data is fetched' };
-        if (data) {
-            resolve(data);
-        }
-        else {
-            reject('failed to fetch data');
-        }
-    });
-};
-const getPromiseDataObject = () => __awaiter(void 0, void 0, void 0, function* () {
-    const data = yield makePromiseObject();
-    return data;
-});
-const getToDo = () => __awaiter(void 0, void 0, void 0, function* () {
-    const response = yield fetch('https://jsonplaceholder.typicode.com/todos/1');
-    return yield response.json();
-});
-const getToDoData = () => __awaiter(void 0, void 0, void 0, function* () {
-    const result = yield getToDo();
-    console.log(result);
-});
-getToDoData();
+// /**
+//  * Async typescript
+//  * Promise<string> / Promise<boolen> / Promise<object> /
+//  */
+// // Mocking
+// const makePromise = (): Promise<string> => {
+//     return new Promise<string>((resolve, reject) => {
+//         const data: string = 'Data is fetched'
+//         if (data) {
+//             resolve(data);
+//         } else {
+//             reject('failed to fetch data');
+//         }
+//     })
+// }
+// // const result1 = makePromise()
+// const getPromiseData = async ():Promise<string> => {
+//     const data = await makePromise();
+//     return data;
+// }
+// /**
+//  * Promise for boolean type
+//  */
+// const makePromiseBoolean = (): Promise<boolean> => {
+//     return new Promise<boolean>((resolve, reject) => {
+//         const data: boolean = true
+//         if (data) {
+//             resolve(data);
+//         } else {
+//             reject('failed to fetch data');
+//         }
+//     })
+// }
+// const getPromiseDataBoolean = async ():Promise<boolean> => {
+//     const data = await makePromiseBoolean();
+//     return data;
+// }
+// /**
+//  * make promise for object
+//  */
+// // type dataType = {
+// //     data: string;
+// // };
+// interface dataType{
+//     data: string;
+// };
+// const makePromiseObject = (): Promise<dataType> => {
+//     return new Promise<dataType>((resolve, reject) => {
+//         const data: dataType = {data: 'Data is fetched'}
+//         if (data) {
+//             resolve(data);
+//         } else {
+//             reject('failed to fetch data');
+//         }
+//     })
+// }
+// const getPromiseDataObject = async ():Promise<dataType> => {
+//     const data = await makePromiseObject();
+//     return data;
+// }
+// /**
+//  * Data fetch from Json Place Holder
+//  */
+// interface IToDo{
+//     userId: number;
+//     id: number;
+//     title: string;
+//     completed: boolean;
+// }
+// const getToDo = async (): Promise<IToDo> => {
+//     const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+//     return await response.json();
+// }
+// const getToDoData = async (): Promise<void> => {
+//     const result = await getToDo();
+//     console.log(result);
+// }
+// getToDoData()
+// /**
+//  * Run : npx ts-node-dev --respawn src/module-3/8-asynchronous.ts
+//  */
