@@ -35,12 +35,12 @@
  * Parameter Properties - er moddome type and initialize eksathe korte pari
  */
 
-class Animal{
-    constructor(public name: string, public specise: string, public sound: string){
-    }
-    public makeSound() {
-        console.log(`The ${this.name} says ${this.sound} after define parameter properties.`);
-    }
-}
-const dog = new Animal('German Shephard', 'dog', 'Ghew Ghew');
-dog.makeSound();
+// class Animal{
+//     constructor(public name: string, public specise: string, public sound: string){
+//     }
+//     public makeSound() {
+//         console.log(`The ${this.name} says ${this.sound} after define parameter properties.`);
+//     }
+// }
+// const dog = new Animal('German Shephard', 'dog', 'Ghew Ghew');
+// dog.makeSound();
