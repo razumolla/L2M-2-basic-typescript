@@ -12,7 +12,7 @@ const myText = (text: string | null):void => {
 //myText("This is not a null value");
 
 
-// unknown type
+// unknown type : jekhon amra (data er type) data somporke kisu e jani nah, tokhon amra null-unknown use korbo
 const guessSomething = (myGuess: unknown) => {
     console.log(myGuess);
 }
